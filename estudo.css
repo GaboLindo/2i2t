@@ -1,0 +1,60 @@
+* {
+
+    margin: 0;
+    padding: 0%;
+
+
+}
+body {
+
+    background-color: beige;
+}
+
+.item{
+
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    margin-top: 10px;
+
+}
+.couteudo {
+
+    display:grid;
+    grid-template-columns: 6% 6% 6% 6%;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu {
+
+    height: 10vh;
+    background-color: rgb(252, 0, 244);
+   
+}
+
+.lado
+{
+    height: 20vh;
+    background-color: rgb(8, 0, 255);
+
+}
+
+.principal {
+
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.rodape{
+
+    height: 30vh;
+    background-color: rgb(255, 0, 238);
+}
+ 
+.meu-site {
+    display: grid;
+    grid-template-areas:"menu menu menu" "rodape rodape rodape" 
+   ;
+}
+
