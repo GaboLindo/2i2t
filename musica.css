@@ -63,3 +63,11 @@
         display: grid;
     }
 }
+
+:root{
+
+    --fundo:rgb(255, 10, 51);
+    --fonte: rgb(180, 12, 40);
+
+    --haver:rgb(77, 2, 14);
+}
