@@ -1,73 +1,160 @@
-* {
+*{
     padding: 0;
     margin: 0;
 }
-.menu {
-    width: 100%;
-    height: 60px;
-    background-color: salmon;
+body{
+    background-color: rgb(21, 94, 230);
 }
-.conteudo-musica {
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.menu{
+    width: 100%;
+    background-color: rgb(12, 12, 175);
+    position: sticky;
+    top: 0;
+}
+.logo {
+    display: inline-block;
+    color: rgb(209, 240, 255);
+    font-size: 32px;
+}
+#logo {
+    height: 15vh;
+}
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(23, 136, 201);
+    overflow: hidden;
+}
+.nav a {
+    display: block;
+    padding: 30px;
+    color: rgb(209, 240, 255);
+}
+.nav a:hover {
+    background-color: rgb(73, 194, 255);
+}
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.hamburger {
+    cursor: pointer;
+    float: right;
+    padding: 35px 20px;
+}
+.hamb-line {
+    background-color: rgb(12, 164, 202);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+.hamb-line::before,
+.hamb-line::after{
+    background-color: rgb(3, 203, 253);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
     width: 100%;
 }
-.rodape {
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+.side-menu {
+    display: none;
+}
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamburger .hamb-line{
+    background: transparent;
+}
+.side-menu:checked ~ .hamburger .hamb-line::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+.side-menu:checked ~ .hamburger .hamb-line::after{
+    transform: rotate(45deg);
+    top: 0;
+}
+.conteudo-musica{
     width: 100%;
-    background-color: rgb(188, 204, 221);
+}
+.rodape{
+    width: 100%;
+    background-color: rgb(102, 188, 209);
     text-align: center;
 }
-.desc-estilo {
+.desc-estilo{
     width: 100%;
-    background-color: tan;
+    background-color: rgb(228, 164, 80);
 }
-.desc-solo {
+.desc-solo{
     width: 100%;
-    background-color: teal;
+    background-color: rgb(240, 203, 155);
 }
-.desc-grupo {
+.desc-grupo{
     width: 100%;
-    background-color: tan;
+    background-color: rgb(228, 164, 80);
 }
-.desc-banda {
+.desc-banda{
     width: 100%;
-    background-color: teal;
+    background-color: rgb(240, 203, 155);
 }
-.desc-app {
+.desc-app{
     width: 100%;
-    background-color: tan;
+    background-color: rgb(228, 164, 80);
 }
-.img-ini {
+.img-ini{
     width: 100%;
 }
-@media screen and (min-width: 768px) {
-    .menu {
-        height: 120px;
-        background-color: blueviolet;
-        color: #FFF;
-        font-size: 32px;
-    }
-    .desc-solo {
-        display: flex;       
-    }
 
-}
-@media screen and (min-width: 1280px) {
-    .menu {
-        height: 200px;
-        background-color: rgb(121, 177, 121);
-        font-size: 64px;
+@media screen and (min-width: 768px){
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
     }
-    .img-ini {
+    .menu li {
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: rgb(73, 194, 255);
+    }
+    .hamburger {
+        display: none;
+    }
+    #logo {
+        width: 20vh;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .menu{
+       height: 200px;
+       background-color: rgb(87, 87, 241);
+       font-size: 54px;
+    }
+    .img-ini{
         width: 50%;
     }
-    .desc-solo {
-        display: grid;
+    .desc-solo{
+        display: flex;
     }
-}
-
-:root{
-
-    --fundo:rgb(255, 10, 51);
-    --fonte: rgb(180, 12, 40);
-
-    --haver:rgb(77, 2, 14);
-}
+   }

@@ -1,67 +1,56 @@
 * {
-
     margin: 0;
-    padding: 0%;
-
-
+    padding: 0; 
 }
+
 body {
-
-    background-color: beige;
+    background-color: rgb(11, 76, 255);
 }
 
-.item{
-
+.item {
     width: 100px;
     height: 100px;
-    background-color: purple;
+    background-color: rgb(23, 50, 199);
     margin-top: 10px;
-
+    margin-left: 10px;
 }
-.couteudo {
 
-    display:grid;
-    grid-template-columns: 6% 6% 6% 6%;
+.conteudo {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
     justify-content: center;
-    align-items: center;
-
-}
-.menu {
-
-    height: 10vh;
-    background-color: rgb(252, 0, 244);
-    grid-area: menu;
-   
 }
 
-.lado
-{
-    height: 80vh;
-    background-color: rgb(8, 0, 255);
-    grid-area:lado ;
-
-}
-
-.principal {
-
-    height: 60vh;
-    background-color: rgb(207, 51, 51);
-}
-
-.rodape{
-
-    height: 30vh;
-    background-color: rgb(255, 0, 238);
-    grid-area: rodape;
-}
- 
 .meu-site {
     display: grid;
     grid-template-columns: 20% 40% 40%;
-    
-    grid-template-areas:
-    "menu menu menu"
-    "lado principal principal"
-    "rodape rodape rodape";
+    grid-template-areas: 
+           "menu menu menu"
+           "lado principal principal"  
+           "rodape rodape rodape"  
+    ;
 }
 
+.menu {
+    height: 10vh;
+    background-color: rgb(0, 174, 255);
+    grid-area: menu;
+}
+
+.lado {
+    height: 80vh;
+    background-color: rgb(10, 47, 255);  
+    grid-area: lado;
+}
+
+.principal {
+    height: 80vh;
+    background-color: rgb(0, 170, 170);  
+    grid-area: principal;
+}
+
+.rodape {
+    height: 10vh;
+    background-color: rgb(17, 0, 255);  
+    grid-area: rodape;
+}
