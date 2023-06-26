@@ -1,2 +1,3 @@
 # Aulas do Segundo Trimestre
-Edson Kichie Mario Noguchi - nº7
+Gabriel José Roberto N 12
+
